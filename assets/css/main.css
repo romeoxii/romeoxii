@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+	--font-sans: 'Plus Jakarta Sans', sans-serif;
+	--font-mono: 'JetBrains Mono', monospace;
+}
+
+:root,
+[data-theme='light'] {
+	--bg: #faf9f4;
+	--ink: #14142b;
+	--card: #ffffff;
+	--border: #14142b;
+	--muted: #6e6e85;
+	--yellow: #ffd23f;
+	--pink: #ff4d8d;
+	--blue: #3d5afe;
+	--mint: #00c2a8;
+}
+
+[data-theme='dark'] {
+	--bg: #000000;
+	--ink: #f5f3ff;
+	--card: #1b1b2e;
+	--border: #f5f3ff;
+	--muted: #9b9bb8;
+	--yellow: #ffd23f;
+	--pink: #ff6fa1;
+	--blue: #7c93ff;
+	--mint: #2de3c6;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+#__nuxt {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--ink);
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	transition:
+		background 0.2s ease,
+		color 0.2s ease;
+}
