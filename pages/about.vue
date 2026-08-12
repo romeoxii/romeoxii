@@ -1,18 +1,6 @@
 <script setup>
-const BIO = `Full-stack developer who likes small, sharp tools over big frameworks. Currently making things faster than they need to be and occasionally shipping them.
-	An introvert by nature, web developer by passion.
-
-Eager to build things that speak louder than I do, using Vue.js , Tailwind CSS , and lately, Nuxt.js .
-
-Thinking of picking up Golang for the backend of a project I'm working on. I'm not a big fan of Javascript for backend, didn't complete my ExpressJs project.
-
-My happy place? A quiet dark room, all the gospel albums i can lay my hands on, and a UI that just feels right. I love clean design, smooth flows, and websites that don't need instructions.
-
-When I'm not writing code, I'm either watching a new anime, reading a manhwa, reading a book (just picked this up out of nowhere), or just enjoying some quiet time offline (sleeping) .
-
-Language, tools or frameworks I'm familiar with
-I don't really have a stack per say but maybe that'll be revealed when I dive deeper into ths niche or get more curious about how things work, but for now my go-to for front-end is Vuejs / Nuxtjs , Tailwind CSS&Supabase .`;
-const skills = ['TypeScript,', 'Vue,', 'Nuxt,', 'Python,', 'Tailwindcss,', 'Supabase.'];
+const BIO = ``;
+const skills = ['Vue,', 'Nuxt,', 'Tailwindcss,', 'TypeScript,', 'Python,', 'Supabase.'];
 </script>
 
 <template>
@@ -31,7 +19,28 @@ const skills = ['TypeScript,', 'Vue,', 'Nuxt,', 'Python,', 'Tailwindcss,', 'Supa
 				<div class="text-(--mint)">$ whoami</div>
 				<div class="mb-3">Romeoxii</div>
 				<div class="text-(--mint)">$ cat about.md</div>
-				<div class="mb-3">{{ BIO }}</div>
+				<div class="mb-3 text-sm">
+					Software developer who likes small, sharp tools over big frameworks. Currently
+					making things faster than they need to be and occasionally shipping them.
+					<br />
+					<br />
+					An introvert by nature, web developer by passion. Eager to build things that
+					speak louder than I do, using Vue.js , Tailwind CSS , and lately, Nuxt.js .
+					<br />
+					<br />
+					Thinking of picking up Python for the backend of a project I'm working on. I'm
+					not a big fan of Javascript for backend, didn't complete my ExpressJs project.
+					<br />
+					My happy place? A quiet dark room, all the gospel albums i can lay my hands on,
+					and a UI that just feels right. I love clean design, smooth flows, and websites
+					that don't need instructions. When I'm not writing code, I'm either watching a
+					new anime, reading a manhwa, reading a book (just picked this up out of
+					nowhere), or just enjoying some quiet time offline (sleeping) . Language, tools
+					or frameworks I'm familiar with I don't really have a stack per say but maybe
+					that'll be revealed when I dive deeper into ths niche or get more curious about
+					how things work, but for now my go-to for front-end is Vuejs / Nuxtjs , Tailwind
+					CSS and Supabase .
+				</div>
 				<div class="text-(--mint)">$ ls skills/</div>
 				<div class="mt-1.5 flex flex-wrap gap-2">
 					<span v-for="s in skills" :key="s" class="text-(--yellow)">{{ s }}</span>
@@ -42,6 +51,7 @@ const skills = ['TypeScript,', 'Vue,', 'Nuxt,', 'Python,', 'Tailwindcss,', 'Supa
 		<div class="mt-5 flex gap-4">
 			<a
 				href="https://github.com/romeoxii"
+				target="_blank"
 				class="text-[14px] text-(--ink) no-underline hover:underline flex items-end gap-1"
 			>
 				<span class="text-(--ink)">
@@ -60,7 +70,7 @@ const skills = ['TypeScript,', 'Vue,', 'Nuxt,', 'Python,', 'Tailwindcss,', 'Supa
 				</span>
 				github
 			</a>
-			<a
+			<!-- <a
 				href="#"
 				class="text-[14px] text-(--ink) no-underline hover:underline flex items-end gap-1"
 			>
@@ -103,7 +113,7 @@ const skills = ['TypeScript,', 'Vue,', 'Nuxt,', 'Python,', 'Tailwindcss,', 'Supa
 					</svg>
 				</span>
 				resume
-			</a>
+			</a> -->
 		</div>
 	</main>
 </template>

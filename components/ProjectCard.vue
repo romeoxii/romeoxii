@@ -12,6 +12,7 @@ const rotation = rotations[props.index % rotations.length];
 <template>
 	<a
 		:href="project.link"
+		target="_blank"
 		class="block rounded-2xl border-2 border-(--border) bg-(--card) p-5 text-(--ink) no-underline shadow-[4px_4px_0_var(--border)] transition-transform duration-200 ease-out hover:-translate-y-0.75 hover:rotate-0 hover:shadow-[6px_8px_0_var(--accent)]"
 		:class="big ? 'p-6' : 'p-5'"
 		:style="{
