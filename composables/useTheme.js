@@ -1,26 +1,25 @@
-// composables/useTheme.js
-// Global theme state shared across every component that calls useTheme().
-const theme = ref('light')
+const THEMES = ['paper', 'dark'];
+// Paper is the primary theme. Cycles paper -> dark.
+const theme = ref('paper');
 
 export function useTheme() {
-  const setTheme = (value) => {
-    theme.value = value
-    if (import.meta.client) {
-      localStorage.setItem('theme', value)
-      document.documentElement.setAttribute('data-theme', value)
-    }
-  }
+	const setTheme = (value) => {
+		if (!THEMES.includes(value)) return;
+		theme.value = value;
+		if (import.meta.client) {
+			localStorage.setItem('theme', value);
+			document.documentElement.setAttribute('data-theme', value);
+		}
+	};
 
-  const toggleTheme = () => setTheme(theme.value === 'light' ? 'dark' : 'light')
+	const toggleTheme = () => setTheme(THEMES[(THEMES.indexOf(theme.value) + 1) % THEMES.length]);
 
-  // Call once on app mount (see app.vue) to restore saved preference.
-  const initTheme = () => {
-    if (import.meta.client) {
-      const saved = localStorage.getItem('theme')
-      const preferred = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-      setTheme(preferred)
-    }
-  }
+	const initTheme = () => {
+		if (import.meta.client) {
+			const saved = localStorage.getItem('theme');
+			setTheme(THEMES.includes(saved) ? saved : 'paper');
+		}
+	};
 
-  return { theme, setTheme, toggleTheme, initTheme }
+	return { theme, setTheme, toggleTheme, initTheme };
 }

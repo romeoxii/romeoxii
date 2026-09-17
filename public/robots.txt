@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace YOUR_DOMAIN with the production domain, then keep this line.
+Sitemap: https://romeoxii.vercel.app

@@ -1,14 +1,24 @@
 <script setup>
-const BIO = ``;
-const skills = ['Vue,', 'Nuxt,', 'Tailwindcss,', 'TypeScript,', 'Python,', 'Supabase.'];
+import { status } from '~/data/status';
+
+const skills = ['Vue', 'Nuxt', 'Tailwind CSS', 'TypeScript', 'Python', 'FastAPI', 'Supabase'];
+
+useSeoMeta({
+	title: 'About — Romeoxii',
+	description:
+		'About Romeoxii: web developer into Vue, Nuxt, Tailwind CSS and Supabase. Currently practicing Python and PHP for backend development.',
+	ogTitle: 'About — Romeoxii',
+	ogImage: '/Images/og.png',
+	twitterCard: 'summary_large_image'
+});
 </script>
 
 <template>
-	<main class="w-full mx-auto max-w-3xl px-6 pb-35 pt-18">
-		<h2 class="mb-5 text-3xl font-extrabold font-mono">// about</h2>
+	<main id="main-content" class="w-full mx-auto max-w-3xl px-6 pb-35 pt-18">
+		<h1 class="mb-5 text-3xl font-extrabold font-mono">// about</h1>
 
 		<div
-			class="max-w-160 overflow-hidden rounded-2xl border-2 border-(--border) bg-[#14142B] shadow-[4px_4px_0_var(--border)]"
+			class="terminal max-w-160 overflow-hidden rounded-2xl border-2 border-(--border) bg-[#14142B] shadow-[4px_4px_0_var(--border)]"
 		>
 			<div class="flex gap-1.5 bg-black/15 px-3.5 py-2.5">
 				<span class="h-2.5 w-2.5 rounded-full bg-[#FF5F56]" />
@@ -25,30 +35,34 @@ const skills = ['Vue,', 'Nuxt,', 'Tailwindcss,', 'TypeScript,', 'Python,', 'Supa
 					<br />
 					<br />
 					An introvert by nature, web developer by passion. Eager to build things that
-					speak louder than I do, using Vue.js , Tailwind CSS , and lately, Nuxt.js .
+					speak louder than I do, using Vue.js, Tailwind CSS, and lately, Nuxt.js.
 					<br />
 					<br />
 					Thinking of picking up Python for the backend of a project I'm working on. I'm
-					not a big fan of Javascript for backend, didn't complete my ExpressJs project.
+					not a big fan of JavaScript for backend, didn't complete my Express.js project.
 					<br />
-					My happy place? A quiet dark room, all the gospel albums i can lay my hands on,
+					My happy place? A quiet dark room, all the gospel albums I can lay my hands on,
 					and a UI that just feels right. I love clean design, smooth flows, and websites
 					that don't need instructions. When I'm not writing code, I'm either watching a
 					new anime, reading a manhwa, reading a book (just picked this up out of
-					nowhere), or just enjoying some quiet time offline (sleeping) . Language, tools
-					or frameworks I'm familiar with I don't really have a stack per say but maybe
-					that'll be revealed when I dive deeper into ths niche or get more curious about
-					how things work, but for now my go-to for front-end is Vuejs / Nuxtjs , Tailwind
-					CSS and Supabase .
+					nowhere), or just enjoying some quiet time offline (sleeping). Language, tools
+					or frameworks I'm familiar with I don't really have a stack per se but maybe
+					that'll be revealed when I dive deeper into this niche or get more curious about
+					how things work, but for now my go-to for front-end is Vue.js / Nuxt.js, Tailwind
+					CSS and Supabase.
 				</div>
 				<div class="text-(--mint)">$ ls skills/</div>
-				<div class="mt-1.5 flex flex-wrap gap-2">
+				<div class="mb-3 mt-1.5 flex flex-wrap gap-2">
 					<span v-for="s in skills" :key="s" class="text-(--yellow)">{{ s }}</span>
 				</div>
+				<div class="text-(--mint)">$ cat now.md</div>
+				<div class="text-sm">{{ status.text }}</div>
 			</div>
 		</div>
 
-		<div class="mt-5 flex gap-4">
+		<div class="mt-5 rounded-2xl border-2 border-(--border) bg-(--card) p-5 shadow-[4px_4px_0_var(--border)]">
+			<div class="mb-3 text-xs text-(--muted) font-mono">// find me</div>
+			<div class="flex flex-wrap gap-4">
 			<a
 				href="https://github.com/romeoxii"
 				target="_blank"
@@ -68,52 +82,36 @@ const skills = ['Vue,', 'Nuxt,', 'Tailwindcss,', 'TypeScript,', 'Python,', 'Supa
 						/>
 					</svg>
 				</span>
-				github
-			</a>
-			<!-- <a
-				href="#"
-				class="text-[14px] text-(--ink) no-underline hover:underline flex items-end gap-1"
-			>
-				<span class="text-(--ink)">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="1.5em"
-						height="1.5em"
-						viewBox="0 0 20 20"
-					>
-						<path d="M0 0h20v20H0z" fill="none" />
-						<g fill="none">
+			github
+		</a>
+				<a
+					href="https://x.com/xii_romeo"
+					target="_blank"
+					rel="noopener"
+					class="text-[14px] text-(--ink) no-underline hover:underline flex items-end gap-1"
+				>
+					<span class="text-(--ink)">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="1.3em"
+							height="1.3em"
+							viewBox="0 0 24 24"
+						>
 							<path
 								fill="currentColor"
-								d="M6.5 12.5a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0 2.5a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z"
+								d="M18.244 2.25h3.308l-7.227 8.26l8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
 							/>
-							<path
-								fill="currentColor"
-								fill-rule="evenodd"
-								d="M11.185 1H4.5A1.5 1.5 0 0 0 3 2.5v15A1.5 1.5 0 0 0 4.5 19h11a1.5 1.5 0 0 0 1.5-1.5V7.202a1.5 1.5 0 0 0-.395-1.014l-4.314-4.702A1.5 1.5 0 0 0 11.185 1M4 2.5a.5.5 0 0 1 .5-.5h6.685a.5.5 0 0 1 .369.162l4.314 4.702a.5.5 0 0 1 .132.338V17.5a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5z"
-								clip-rule="evenodd"
-							/>
-							<path
-								stroke="currentColor"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M11.5 2.1v4.7h4.7"
-							/>
-							<path
-								fill="currentColor"
-								d="M8.134 6.133a1.067 1.067 0 1 0 0-2.133a1.067 1.067 0 0 0 0 2.133"
-							/>
-							<path
-								fill="currentColor"
-								fill-rule="evenodd"
-								d="M10.266 8.444c0-1.134-.955-1.955-2.133-1.955S6 7.309 6 8.444v.534a.356.356 0 0 0 .356.355h3.555a.356.356 0 0 0 .355-.355z"
-								clip-rule="evenodd"
-							/>
-						</g>
-					</svg>
-				</span>
-				resume
-			</a> -->
+						</svg>
+					</span>
+					twitter
+				</a>
+				<NuxtLink
+					to="/uses"
+					class="text-[14px] text-(--ink) no-underline hover:underline flex items-end gap-1"
+				>
+					uses →
+				</NuxtLink>
+			</div>
 		</div>
 	</main>
 </template>

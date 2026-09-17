@@ -10,10 +10,9 @@ const rotation = rotations[props.index % rotations.length];
 </script>
 
 <template>
-	<a
-		:href="project.link"
-		target="_blank"
-		class="block rounded-2xl border-2 border-(--border) bg-(--card) p-5 text-(--ink) no-underline shadow-[4px_4px_0_var(--border)] transition-transform duration-200 ease-out hover:-translate-y-0.75 hover:rotate-0 hover:shadow-[6px_8px_0_var(--accent)]"
+	<NuxtLink
+		:to="`/projects/${project.slug}`"
+		class="card-focus block rotate-[var(--rotate)] rounded-2xl border-2 border-(--border) bg-(--card) p-5 text-(--ink) no-underline shadow-[4px_4px_0_var(--border)] transition-transform duration-200 ease-out hover:-translate-y-0.75 hover:rotate-0 hover:shadow-[6px_8px_0_var(--accent)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
 		:class="big ? 'p-6' : 'p-5'"
 		:style="{
 			'--rotate': rotation + 'deg',
@@ -25,6 +24,12 @@ const rotation = rotations[props.index % rotations.length];
 				{{ project.name }}
 			</h3>
 			<span class="text-base">↗</span>
+		</div>
+		<div
+			v-if="big && project.image"
+			class="mb-4 mt-3 overflow-hidden rounded-xl border-2 border-(--border)"
+		>
+			<img :src="project.image" :alt="`${project.name} preview`" class="h-40 w-full object-cover" loading="lazy" />
 		</div>
 		<p class="mb-3 mt-2 text-sm text-(--muted)">
 			{{ project.desc }}
@@ -39,5 +44,5 @@ const rotation = rotations[props.index % rotations.length];
 				{{ tag }}
 			</span>
 		</div>
-	</a>
+	</NuxtLink>
 </template>
