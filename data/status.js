@@ -1,4 +1,4 @@
 export const status = {
 	label: 'currently',
-	text: 'Practicing Python (Fast API, Django) for backend development.'
+	text: 'Practicing Python Fast API & PHP Laravel for backend development.'
 };

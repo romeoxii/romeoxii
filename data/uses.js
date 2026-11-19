@@ -1,14 +1,20 @@
 export const uses = [
 	{
 		section: 'frontend',
-		items: ['Vue.js', 'Nuxt.js', 'Tailwind CSS', 'TypeScript']
+		items: ['Vue.js', 'Nuxt.js', 'Tailwind CSS', 'TypeScript', 'React.js']
 	},
 	{
 		section: 'backend & data',
-		items: ['Supabase', 'Node.js + Express.js', 'Python + FastAPI (learning)']
+		items: [
+			'Supabase',
+			'Express.js',
+			'Node.js',
+			'Python + FastAPI (learning)',
+			'PHP + Laravel (learning)'
+		]
 	},
 	{
 		section: 'tooling',
-		items: ['Bun', 'Git + GitHub', 'Vercel']
+		items: ['Bun', 'Git + GitHub', 'Vercel', 'Neon']
 	}
 ];
