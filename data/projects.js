@@ -24,18 +24,18 @@ export const projects = [
 		image: null
 	},
 
-	{
-		name: "Celine's Treats",
-		slug: 'celines-treats',
-		desc: 'Pastries e-commerce website.',
-		longDesc:
-			"An e-commerce website for Celine's Treats — browse the pastry menu, place orders, and manage products. Built with Vue.js, Tailwind CSS, and Supabase.",
-		tags: ['Vue.js', 'Tailwind CSS', 'Supabase'],
-		color: 'pink',
-		link: 'https://celinestreatss.vercel.app',
-		repo: null,
-		image: null
-	},
+	// {
+	// 	name: "Celine's Treats",
+	// 	slug: 'celines-treats',
+	// 	desc: 'Pastries e-commerce website.',
+	// 	longDesc:
+	// 		"An e-commerce website for Celine's Treats — browse the pastry menu, place orders, and manage products. Built with Vue.js, Tailwind CSS, and Supabase.",
+	// 	tags: ['Vue.js', 'Tailwind CSS', 'Supabase'],
+	// 	color: 'pink',
+	// 	link: 'https://celinestreatss.vercel.app',
+	// 	repo: null,
+	// 	image: null
+	// },
 
 	{
 		name: 'ApexPanel',
@@ -55,16 +55,7 @@ export const projects = [
 		slug: 'fetchflow',
 		desc: 'A batch file & folder downloader with a FastAPI backend and React frontend — built as a learning project while studying Python, HTTP requests, file handling, and full-stack development.',
 		longDesc: `FetchFlow is a batch file & folder downloader with a FastAPI backend and React frontend.
-
-Current Features:
-- Direct file downloads — paste any HTTP/HTTPS file URL
-- Folder batch downloads — paste an Alist-compatible folder URL and every file inside is queued automatically
-- Streaming downloads — files are written chunk-by-chunk, so large files stay light on memory
-- Live progress — speed, percentage, and time remaining update in real time for every active download
-- Resume support — interrupted downloads continue via Range requests when the server allows it
-- Cancel & retry — stop a running download or retry a failed one without re-adding it
-- Duplicate detection — skips files that already exist locally
-- Queue view — active downloads show as full cards, pending files stack in a scrollable queue, finished ones collapse into a history section`,
+		Current Features: Direct file downloads, Folder batch downloads, Streaming downloads, Live progress,  Resume support,  Cancel & retry,  Duplicate detection, Queue view`,
 		tags: ['Python', 'FastAPI', 'React', 'TypeScript', 'Tailwind CSS'],
 		color: 'blue',
 		link: null,
